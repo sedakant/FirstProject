@@ -1,0 +1,63 @@
+//SELECT COUNT(Id), COUNT_DISTINCT(Name), SUM(Amount), MAX(Amount), MIN(Amount), AVG(Amount)
+//FROM Opportunity
+
+// Count the Opportunities In Closed Won Stage  
+//SELECT  COUNT(Id)
+//FROM Opportunity
+//WHERE StageName = 'Closed Won'
+
+//Count the Opportunities in Closed Lost Stage
+//SELECT COUNT(Id)
+//FROM Opportunity
+//WHERE StageName = ' Closed Lost ' )
+
+//SELECT  COUNT(Id)
+//FROM Opportunity
+//WHERE StageName = 'Closed Lost'
+
+//SELECT StageName, COUNT(Id)
+//FROM Opportunity
+//GROUP BY StageName
+
+// If you use aggregate function with any additional field in Select line
+// It must be Grouped by that field or it will not work
+// Any time you add any new field other than the field in group by, it will not work
+// as long as it does not show up in group by field list
+
+// Get the count of Leads of each LeadSource 
+//SELECT LeadSource, COUNT(Id)
+//FROM Lead
+//GROUP BY LeadSource
+
+// Get the count of Leads of each State 
+// only return the row if the count more than OR euqal to 2 
+
+//SELECT State, COUNT(Id)
+//FROM Lead
+//GROUP BY State
+//HAVING COUNT(Id) >= 2
+
+// Get the count of Leads of each Status 
+// only return the row if the count more than less than 5
+//SELECT  Status, COUNT(Id)
+//FROM Lead
+//GROUP BY Status
+//HAVING Count(Id) < 5
+
+
+// Get all the count of Account and
+// the sum of AnnualRevenue 
+//for each Rating(Hot, Cold, Warm, NULL)
+//SELECT Rating, COUNT(Id), SUM(AnnualRevenue)
+//FROM Account
+//GROUP BY Rating
+//HAVING Rating != Null
+
+//since the condition here
+//is not on already aggreated result
+//we can simply filter it out
+//before even using GROUP BY with WHERE
+SELECT Rating, COUNT(Id), SUM(AnnualRevenue)
+FROM Account
+WHERE Rating != NULL
+GROUP BY Rating
