@@ -15,7 +15,7 @@ public abstract class Shape {
     
     public String name ; 
     // protected access modifier allow the field|methods 
-    // avaialble same class and child classes only 
+    // available same class and child classes only 
     // block access everywhere else 
     protected Decimal area ; 
     

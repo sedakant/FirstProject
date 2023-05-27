@@ -15,7 +15,7 @@ trigger BookTrigger on Book__c(
 
   // Requirement : When the new book is created or updated
   // if the year is empty ==> set it to 1999
-  // Normalize the Book Name to remove extra spaces everywhere in the name
+  // Normalize the Book Name to remove extra spaces eveywhere in the name
   // make your bookName title case
   // THIS NEED TO BE WRITTEN IN BEFORE_INSERT OR BEFORE_UPDATE
   if (Trigger.isBefore && (Trigger.isInsert || Trigger.isUpdate)) {
