@@ -5,14 +5,14 @@
 List<Integer> numberList1 = new List<Integer>{64,55,34,86,31};
 System.debug('numberList1 value is : ' + numberList1); 
 
-//// Creating a List by copying everything inside another List
+// Creating a List by copying everything inside another List
 List<Integer> numberList2 = new List<Integer>(numberList1);
 System.debug('numberList2 value is : ' + numberList2); 
 
 
 Set<Integer> numberSet = new Set<Integer>{23,71,44,71,43};
 System.debug('numberSet value is : ' + numberSet); 
-//// Creating a List by copying everything inside a Set
+// Creating a List by copying everything inside a Set
 List<Integer> numberList3 = new List<Integer>(numberSet);
 System.debug('numberList3 value is : ' + numberList3); 
 
