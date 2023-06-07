@@ -1,0 +1,23 @@
+<template>
+
+    <lightning-card title="Calling Apex method on Demand" icon-name="standard:opportunity">
+        
+        <div class="slds-var-m-around_medium"> 
+
+            <p> Highest Opp Amount : {highestOppAmount} </p>
+            <lightning-button 
+                label="Get Max Amount"
+                onclick={handleClick}
+            ></lightning-button>
+            <p>GenPoint Account</p>
+            <lightning-button 
+                label="Get GenePoint Amount"
+                onclick={handleGetAccount}
+            ></lightning-button>
+
+        </div>
+    
+    </lightning-card>
+
+</template>
+
