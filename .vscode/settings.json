@@ -5,6 +5,8 @@
     "**/.sfdx": true
   },
   "cSpell.words": [
-    "tolowercase"
+    "import",
+    "tolowercase",
+    "VMAQ"
   ]
 }
